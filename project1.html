@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projet 1 – CTF | Badr BELAID</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+<header class="header">
+  <h1 class="site-title">Badr BELAID</h1>
+  <nav class="nav">
+    <a href="index.html#about">Profil</a>
+    <a href="index.html#work">Réalisations</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="block">
+  <div class="inner">
+
+    <h2>Projet 1 : Plateforme CTF</h2>
+
+    <p>
+      <strong>Lien du projet :</strong>
+      <a href="https://ctf-eq5.yggame.fr/" target="_blank">
+        https://ctf-eq5.yggame.fr/
+      </a>
+    </p>
+
+    <p>
+      Projet réalisé dans le cadre d’une <strong>Situation d’Apprentissage et d’Évaluation (SAÉ)</strong> de deuxième année,
+      en collaboration avec l’association
+      <a href="https://www.linkedin.com/company/yggame/posts/?feedView=all" target="_blank">
+        Yggame
+      </a>.
+      Nous étions une équipe de <strong>4 personnes</strong> chargée de concevoir une plateforme complète
+      permettant l’organisation d’un événement de type <strong>Capture The Flag (CTF)</strong>.
+    </p>
+
+    <h3>Contexte</h3>
+    <p>
+      <strong>Période :</strong> du 08/09/2025 au 09/01/2025.<br><br>
+      Le projet a été mené selon les <strong>méthodes AGILES (SCRUM)</strong>,
+      organisées en sprints de deux semaines.
+      Nous avons débuté par une
+      <a href="https://docs.google.com/document/d/1db2XdLw-TWCSGamqBimdRTengdYSkHwDp79g49cJv3U/edit?usp=sharing" target="_blank">
+        analyse complète de l’existant
+      </a>,
+      validée par le client, avant de baser la solution sur
+      <strong>CTFd</strong>, une plateforme open source spécialisée dans les CTF.
+    </p>
+
+    <p>
+      L’infrastructure a été déployée via <strong>Docker</strong> (CTFd, base de données,
+      services nécessaires aux défis Web, etc.).
+      Les demandes du client étaient formalisées sous forme de <strong>User Stories</strong>
+      dans <strong>Trello</strong>, puis priorisées à chaque rétrospective de sprint.
+    </p>
+
+    <h3>Rôle – Product Owner</h3>
+    <p>
+      J’occupais le rôle de <strong>Product Owner</strong>, avec une double responsabilité
+      fonctionnelle et technique :
+    </p>
+    <ul>
+      <li>Échanges directs avec le client (emails, clarification des besoins).</li>
+      <li>Rédaction des <strong>User Stories</strong> et gestion du <strong>backlog</strong>.</li>
+      <li>Priorisation des fonctionnalités avec le SCRUM Master et l’équipe.</li>
+      <li>Transmission et clarification des attentes client auprès des développeurs.</li>
+      <li>Prise de décisions fonctionnelles, y compris le fait de refuser certaines demandes irréalisables.</li>
+    </ul>
+
+    <h3>Contributions techniques</h3>
+    <ul>
+      <li>
+        <strong>Création de défis CTF</strong> :
+        Web, OSINT, cryptographie, réseaux, probabilités,
+        ainsi que des défis Web/Base de Données (ex : injections SQL).
+      </li>
+      <li>
+        <strong>Intégration Discord</strong> :
+        connexion au site via l’API Discord, création et configuration
+        d’un serveur Discord dédié à l’événement.
+      </li>
+      <li>
+        <strong>Fonctionnalités plateforme</strong> :
+        gestion des emails (inscription, mot de passe oublié),
+        scoreboard, timer, traduction automatique des titres et descriptions
+        via un plugin.
+      </li>
+    </ul>
+
+    <h3>Technologies utilisées</h3>
+    <ul>
+      <li>Docker & conteneurisation</li>
+      <li>Python (CTFd / Flask)</li>
+      <li>HTML / CSS / JavaScript</li>
+      <li>PHP</li>
+      <li>Bases de données (SQL, MariaDB)</li>
+      <li>API Discord</li>
+      <li>Trello & méthode SCRUM</li>
+      <li>Cryptographie appliquée</li>
+    </ul>
+
+    <h3>Apports et apprentissages</h3>
+    <p>
+      Ce projet m’a permis de développer des compétences clés attendues en entreprise :
+    </p>
+    <ul>
+      <li>Capacité à <strong>apprendre rapidement</strong> des technologies inconnues
+          en s’appuyant sur la documentation, la veille et l’IA.</li>
+      <li>Compréhension et reformulation du <strong>besoin client</strong>.</li>
+      <li>Savoir <strong>dire non</strong> lorsqu’une demande n’est pas réaliste
+          (ex : outil de maintenance incompatible avec l’évolution de CTFd).</li>
+      <li>Gestion de la pression et adaptation aux imprévus.</li>
+      <li>Renforcement du <strong>travail en équipe</strong> et de la confiance
+          envers les autres membres.</li>
+    </ul>
+
+    <h3>Difficultés rencontrées</h3>
+    <ul>
+      <li>Sous-estimation de certaines User Stories, nécessitant une renégociation avec le client.</li>
+      <li>Gestion des délais en fin de sprint (entraide jusqu’à finalisation avant revue).</li>
+      <li>Équilibre entre perfectionnisme personnel et délégation efficace.</li>
+    </ul>
+
+      <h3>Présentation vidéo du projet</h3>
+      <p>
+        <a href="https://youtu.be/eNYuuvIofmg" target="_blank" class="button-red">Voir la vidéo sur YouTube</a>
+      </p>
+
+
+
+  </div>
+</main>
+
+<footer class="footer">
+  <small>© 2025 – Badr BELAID</small>
+</footer>
+</body>
+</html>

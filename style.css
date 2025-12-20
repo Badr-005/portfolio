@@ -1,0 +1,299 @@
+/* =========================================
+   1. VARIABLES & RESET (La base du design)
+   ========================================= */
+:root {
+  /* Charte graphique */
+  --primary: #2563eb;       /* Bleu "Tech" */
+  --primary-dark: #1d4ed8;  /* Bleu plus foncé pour le survol */
+  --text-main: #334155;     /* Gris foncé pour le texte */
+  --text-light: #64748b;    /* Gris clair pour les détails */
+  --bg-body: #f8fafc;       /* Fond de page très clair */
+  --bg-card: #ffffff;       /* Fond des cartes (blanc) */
+  --header-bg: #1e293b;     /* Header sombre */
+  --header-text: #f1f5f9;   /* Texte du header */
+}
+
+/* On remet les marges à zéro pour tous les navigateurs */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+}
+
+/* =========================================
+   2. GLOBAL LAYOUT
+   ========================================= */
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-body);
+  /* Permet au footer de rester en bas même si la page est vide */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Le conteneur qui centre tout le contenu au milieu de l'écran */
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Petite marge sur les côtés pour mobile */
+}
+
+/* Liens par défaut */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+/* =========================================
+   3. HEADER & NAVIGATION
+   ========================================= */
+.header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 1.5rem 0;
+  position: sticky; /* Le menu reste collé en haut */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.site-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.site-subtitle {
+  font-size: 0.95rem;
+  color: #cbd5e1; /* Gris très clair */
+  margin-bottom: 1.2rem;
+  font-weight: 300;
+}
+
+/* Barre de navigation */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+  color: #60a5fa; /* Bleu clair au survol */
+  border-bottom-color: #60a5fa;
+}
+
+/* =========================================
+   4. SECTIONS & TYPOGRAPHIE
+   ========================================= */
+main {
+  flex: 1; /* Pousse le footer vers le bas */
+}
+
+.block {
+  padding: 4rem 0;
+}
+
+/* Section avec fond blanc pour alterner */
+.block-alt {
+  background-color: var(--bg-card);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+h2 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  border-bottom: 3px solid #bfdbfe; /* Petit soulignement bleu pâle */
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: #0f172a;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+  max-width: 100%; /* Évite les lignes de texte trop longues à lire */
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================================
+   5. COMPOSANT : CARTE PROJET (.project-line)
+   ========================================= */
+.project-line {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Ombre douce */
+  border-left: 5px solid var(--primary); /* La barre bleue à gauche */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Animation au survol de la souris */
+.project-line:hover {
+  transform: translateY(-4px); /* La carte monte un peu */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project-line h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.project-line p {
+  margin-bottom: 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* Le bouton "Voir détails" */
+.project-line a {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap; /* Empêche le texte du bouton de passer à la ligne */
+  margin-left: 1.5rem;
+}
+
+.project-line a:hover {
+  background-color: var(--primary-dark);
+}
+
+/* =========================================
+   6. CONTACT & FOOTER
+   ========================================= */
+.contact-simple {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.contact-simple li {
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-simple a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.contact-simple a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: var(--header-bg);
+  color: #94a3b8;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+  border-top: 1px solid #334155;
+}
+
+/* =========================================
+   7. IMAGES DANS LES PROJETS
+   ========================================= */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Bouton rouge pour la vidéo */
+.button-red {
+  background-color: #e74c3c; /* Rouge vif */
+  color: #ffffff; /* Texte blanc */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none; /* Si utilisé dans un <a> */
+}
+
+.button-red:hover {
+  background-color: #c0392b; /* Rouge un peu plus foncé au survol */
+  transform: scale(1.05); /* Légère animation */
+}
+
+.screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.screenshots img {
+  max-width: 100%;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   8. RESPONSIVE (MOBILE)
+   ========================================= */
+@media (max-width: 600px) {
+  /* Le menu devient plus petit */
+  .site-title { font-size: 1.5rem; }
+  .nav { gap: 15px; flex-wrap: wrap; }
+  
+  /* Les cartes projets passent en colonne */
+  .project-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .project-line a {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%; /* Bouton pleine largeur sur mobile */
+    text-align: center;
+  }
+
+  .header { padding: 1rem 0; }
+  .block { padding: 2.5rem 0; }
+}
