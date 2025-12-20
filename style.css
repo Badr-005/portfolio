@@ -13,13 +13,13 @@
   --header-text: #f1f5f9;   /* Texte du header */
 }
 
-/* On remet les marges à zéro pour tous les navigateurs */
+/* Reset global */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-html{
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 130px;
 }
@@ -32,20 +32,17 @@ body {
   line-height: 1.6;
   color: var(--text-main);
   background-color: var(--bg-body);
-  /* Permet au footer de rester en bas même si la page est vide */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Le conteneur qui centre tout le contenu au milieu de l'écran */
 .inner {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 1.5rem; /* Petite marge sur les côtés pour mobile */
+  padding: 0 1.5rem;
 }
 
-/* Liens par défaut */
 a {
   text-decoration: none;
   color: inherit;
@@ -58,12 +55,22 @@ a {
 .header {
   background-color: var(--header-bg);
   color: var(--header-text);
-  padding: 1.5rem 0;
-  position: sticky; /* Le menu reste collé en haut */
+  position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+}
+
+.header-left {
+  text-align: left;
 }
 
 .site-title {
@@ -76,16 +83,16 @@ a {
 
 .site-subtitle {
   font-size: 0.95rem;
-  color: #cbd5e1; /* Gris très clair */
+  color: #cbd5e1;
   margin-bottom: 1.2rem;
   font-weight: 300;
 }
 
-/* Barre de navigation */
 .nav {
   display: flex;
   justify-content: center;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -96,22 +103,51 @@ a {
 }
 
 .nav a:hover {
-  color: #60a5fa; /* Bleu clair au survol */
+  color: #60a5fa;
   border-bottom-color: #60a5fa;
+}
+
+.nav button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.nav button:hover {
+  background-color: #45a049;
+}
+
+.cv-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cv-button:hover {
+  background-color: #45a049;
 }
 
 /* =========================================
    4. SECTIONS & TYPOGRAPHIE
    ========================================= */
 main {
-  flex: 1; /* Pousse le footer vers le bas */
+  flex: 1;
 }
 
 .block {
   padding: 4rem 0;
 }
 
-/* Section avec fond blanc pour alterner */
 .block-alt {
   background-color: var(--bg-card);
   border-top: 1px solid #e2e8f0;
@@ -123,7 +159,7 @@ h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   display: inline-block;
-  border-bottom: 3px solid #bfdbfe; /* Petit soulignement bleu pâle */
+  border-bottom: 3px solid #bfdbfe;
   padding-bottom: 5px;
 }
 
@@ -136,7 +172,7 @@ h3 {
 
 p {
   margin-bottom: 1rem;
-  max-width: 100%; /* Évite les lignes de texte trop longues à lire */
+  max-width: 100%;
 }
 
 ul {
@@ -145,26 +181,24 @@ ul {
 }
 
 /* =========================================
-   5. COMPOSANT : CARTE PROJET (.project-line)
+   5. CARTE PROJET (.project-line)
    ========================================= */
 .project-line {
   background: var(--bg-card);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  border-radius: 8px; /* Coins arrondis */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Ombre douce */
-  border-left: 5px solid var(--primary); /* La barre bleue à gauche */
-  
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  border-left: 5px solid var(--primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Animation au survol de la souris */
 .project-line:hover {
-  transform: translateY(-4px); /* La carte monte un peu */
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 .project-line h3 {
@@ -178,7 +212,6 @@ ul {
   font-size: 0.95rem;
 }
 
-/* Le bouton "Voir détails" */
 .project-line a {
   background-color: var(--primary);
   color: white;
@@ -186,8 +219,9 @@ ul {
   border-radius: 6px;
   font-weight: 600;
   font-size: 0.9rem;
-  white-space: nowrap; /* Empêche le texte du bouton de passer à la ligne */
+  white-space: nowrap;
   margin-left: 1.5rem;
+  transition: 0.3s;
 }
 
 .project-line a:hover {
@@ -231,7 +265,7 @@ ul {
 }
 
 /* =========================================
-   7. IMAGES DANS LES PROJETS
+   7. IMAGES & BOUTONS
    ========================================= */
 img {
   max-width: 100%;
@@ -239,10 +273,9 @@ img {
   border-radius: 4px;
 }
 
-/* Bouton rouge pour la vidéo */
 .button-red {
-  background-color: #e74c3c; /* Rouge vif */
-  color: #ffffff; /* Texte blanc */
+  background-color: #e74c3c;
+  color: #ffffff;
   border: none;
   padding: 12px 24px;
   font-size: 16px;
@@ -250,12 +283,12 @@ img {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-  text-decoration: none; /* Si utilisé dans un <a> */
+  text-decoration: none;
 }
 
 .button-red:hover {
-  background-color: #c0392b; /* Rouge un peu plus foncé au survol */
-  transform: scale(1.05); /* Légère animation */
+  background-color: #c0392b;
+  transform: scale(1.05);
 }
 
 .screenshots {
@@ -267,91 +300,29 @@ img {
 }
 
 .screenshots img {
-  max-width: 100%;
   width: 300px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.nav button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 5px;
-  margin-left: 10px;
-}
-
-.nav button:hover {
-  background-color: #45a049;
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* espace entre titre, nav et bouton */
-  flex-wrap: wrap;
-}
-
-.header-left {
-  text-align: left;
-}
-
-/* Bouton CV */
-.cv-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.cv-button:hover {
-  background-color: #45a049;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header-left, .nav, .cv-button {
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .cv-button {
-    width: 100%;
-  }
-}
-
-
-
 /* =========================================
-   8. RESPONSIVE (MOBILE)
+   8. RESPONSIVE
    ========================================= */
 @media (max-width: 600px) {
-  /* Le menu devient plus petit */
   .site-title { font-size: 1.5rem; }
   .nav { gap: 15px; flex-wrap: wrap; }
-  
-  /* Les cartes projets passent en colonne */
+  .header-inner { flex-direction: column; align-items: center; padding: 1rem; }
+  .header-left, .nav, .cv-button { text-align: center; margin-bottom: 0.5rem; }
+  .cv-button { width: 100%; }
+  .block { padding: 2.5rem 0; }
   .project-line {
     flex-direction: column;
     align-items: flex-start;
   }
-  
   .project-line a {
     margin-left: 0;
     margin-top: 1rem;
-    width: 100%; /* Bouton pleine largeur sur mobile */
+    width: 100%;
     text-align: center;
   }
-
-  .header { padding: 1rem 0; }
-  .block { padding: 2.5rem 0; }
 }
