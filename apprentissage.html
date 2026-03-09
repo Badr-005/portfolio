@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio d'apprentissage – Badr BELAID</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="inner header-inner">
+        <div class="header-left">
+            <h1 class="site-title">Badr BELAID</h1>
+            <p class="site-subtitle">Étudiant en BUT Informatique</p>
+        </div>
+        <nav class="nav">
+            <a href="index.html#about">Profil</a>
+            <a href="index.html#work">Réalisations</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="apprentissage.html">Portfolio d'Apprentissage</a>
+        </nav>
+        <a href="CV BELAID Badr.pdf" download class="cv-button">Télécharger mon CV</a>
+    </div>
+</header>
+
+<main class="block">
+    <div class="inner">
+
+        <h2>Portfolio d'apprentissage</h2>
+
+        <p>
+            Dans le cadre du <strong>BUT Informatique – parcours IAMSI</strong> (Intégration d'Applications et Management du Système d'Information),
+            six compétences sont développées tout au long de la formation. En troisième année, trois compétences
+            s'arrêtent au <strong>niveau 2</strong> pour ce parcours :
+        </p>
+
+        <ul>
+            <li><strong>C2 – Optimiser des applications informatiques</strong></li>
+            <li><strong>C3 – Administrer des systèmes informatiques communicants complexes</strong></li>
+            <li><strong>C4 – Gérer des données de l'information</strong></li>
+        </ul>
+
+        <p>
+            Cette page présente, pour chacune des trois compétences, les apprentissages critiques du niveau 2
+            et les traces concrètes issues de mes projets qui en témoignent.
+        </p>
+
+        <h3>C2 – Optimiser des applications informatiques</h3>
+
+        <p>
+            Cette compétence vise à <em>proposer des applications informatiques optimisées en fonction de critères
+            spécifiques</em> : temps d'exécution, précision, consommation de ressources.
+        </p>
+
+        <h4>Apprentissages critiques – Niveau 2 : Sélectionner les algorithmes adéquats pour répondre à un problème donné</h4>
+        <ul>
+            <li><strong>AC1</strong> – Choisir des structures de données complexes adaptées au problème.</li>
+            <li><strong>AC2</strong> – Utiliser des techniques algorithmiques adaptées pour des problèmes complexes (recherche opérationnelle, méthodes arborescentes, optimisation globale, intelligence artificielle…).</li>
+            <li><strong>AC3</strong> – Comprendre les enjeux et moyens de sécurisation des données et du code.</li>
+            <li><strong>AC4</strong> – Évaluer l'impact environnemental et sociétal des solutions proposées.</li>
+        </ul>
+
+        <h4>Trace : <a href="project3.html" class="apprentissage">Projet Pokémon TCG (backend Java)</a></h4>
+        <p>
+            Le projet <strong>Pokémon TCG</strong> m'a permis de travailler directement sur cette compétence.
+            L'objectif était de reprendre un front-end fonctionnel existant et d'implémenter intégralement le
+            backend en Java, en respectant des <strong>tests unitaires</strong> fournis par les enseignants.
+        </p>
+        <p>
+            Pour modéliser les mécaniques du jeu, j'ai <strong>choisi des structures de données complexes
+            adaptées</strong> (AC1) : hiérarchies de classes, collections typées, et le pattern Strategy pour
+            encapsuler les comportements variables des cartes. Face à la diversité des effets à implémenter,
+            j'ai également dû <strong>sélectionner des techniques algorithmiques adaptées</strong> (AC2) :
+            par exemple, l'utilisation de méthodes arborescentes pour la résolution des enchaînements d'effets
+            conditionnels entre cartes.
+        </p>
+        <p>
+            Les tests unitaires m'ont contraint à <strong>sécuriser le code</strong> face aux cas limites et
+            aux données inattendues (AC3) : validation des entrées, gestion des états invalides, protection
+            contre les effets de bord.
+        </p>
+        <p>
+            Enfin, lors du choix entre plusieurs implémentations possibles, j'ai calculé leur <strong>complexité
+            algorithmique</strong> afin de comparer leur consommation de ressources et de
+            <strong>mesurer leur impact environnemental et sociétal</strong> (AC4) : une solution plus efficace
+            en temps d'exécution et en mémoire représente directement une réduction de la consommation
+            énergétique à l'échelle d'une application utilisée en production.
+        </p>
+
+        <h3>C3 – Administrer des systèmes informatiques communicants complexes</h3>
+
+        <p>
+            Cette compétence concerne l'installation, la configuration et la mise à disposition d'infrastructures
+            et de services permettant à différents systèmes de communiquer.
+        </p>
+
+        <h4>Apprentissages critiques – Niveau 2 : Déployer des services dans une architecture réseau</h4>
+        <ul>
+            <li><strong>AC1</strong> – Concevoir et développer des applications communicantes.</li>
+            <li><strong>AC2</strong> – Utiliser des serveurs et des services réseau virtualisés.</li>
+            <li><strong>AC3</strong> – Sécuriser les services et données d'un système.</li>
+        </ul>
+
+        <h4>Trace : <a href="project1.html" class="apprentissage">Projet CTF – Plateforme Yggame</a></h4>
+        <p>
+            Le projet <strong>CTF réalisé pour l'association Yggame</strong> m'a permis de développer pleinement
+            cette compétence. J'ai participé à la <strong>conception d'applications communicantes</strong> (AC1) :
+            intégration de l'API Discord pour la connexion au site, configuration du serveur de messagerie pour
+            les emails d'inscription et de réinitialisation de mot de passe, et interaction entre CTFd, la base
+            de données MariaDB et les services web des défis (AC1).
+        </p>
+        <p>
+            L'infrastructure repose sur des <strong>conteneurs Docker</strong> (AC2), ce qui m'a confronté
+            aux enjeux de la virtualisation de services réseau : réseau interne Docker, exposition des ports,
+            gestion des volumes et des dépendances entre conteneurs. Enfin, dans le cadre d'un événement de
+            cybersécurité, la <strong>sécurisation des services et des données</strong> (AC3) était une
+            exigence centrale : gestion des accès administrateurs et isolement des services de défis
+            potentiellement vulnérables.
+        </p>
+
+        <h3>C4 – Gérer des données de l'information</h3>
+
+        <p>
+            Cette compétence vise à concevoir, gérer, administrer et exploiter les données d'une organisation
+            pour assurer un bon pilotage de l'entreprise.
+        </p>
+
+        <h4>Apprentissages critiques – Niveau 2 : Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité</h4>
+        <ul>
+            <li><strong>AC1</strong> – Optimiser les modèles de données de l'entreprise.</li>
+            <li><strong>AC2</strong> – Assurer la confidentialité des données (intégrité et sécurité).</li>
+            <li><strong>AC3</strong> – Organiser la restitution de données à travers la programmation et la visualisation.</li>
+            <li><strong>AC4</strong> – Manipuler des données hétérogènes.</li>
+        </ul>
+
+        <h4>Trace 1 : <a class="apprentissage" href="project2.html">Projet EcoCoin – Site e-commerce PHP/MVC</a></h4>
+        <p>
+            Dans le projet <strong>EcoCoin</strong>, j'ai assuré la conception et la configuration complète
+            de la base de données relationnelle du site e-commerce. J'ai travaillé à l'<strong>optimisation
+            du modèle de données</strong> (AC1) : normalisation des tables, définition des clés étrangères
+            et cohérence des relations entre utilisateurs, produits, commandes et panier.
+        </p>
+        <p>
+            La gestion de l'authentification m'a conduit à mettre en pratique la <strong>sécurité des données</strong>
+            (AC2) : hashage des mots de passe, validation des entrées utilisateur et protection contre les
+            injections SQL via PDO.
+        </p>
+        <p>
+            La <strong>restitution des données</strong> (AC3) a été organisée à travers l'architecture MVC :
+            les modèles PHP encapsulent les requêtes SQL et transmettent les données au contrôleur, qui les
+            passe aux vues pour un affichage dynamique. Concrètement, le backoffice admin restitue la liste
+            des produits et commandes via des requêtes filtrées et paginées, le panier affiche en temps réel
+            le contenu et le total calculé côté serveur, et l'historique des commandes restitue les données
+            de plusieurs tables jointes (utilisateurs, produits, commandes).
+        </p>
+
+        <h4>Trace 2 : <a class="apprentissage" href="project4.html">Projet Gate K – Plateforme de gestion de CTF</a></h4>
+        <p>
+            Dans le projet <strong>Gate K</strong> (SAÉ 4.01), j'ai participé à la conception et à la
+            normalisation de la base de données MariaDB. Assurer la cohérence des données dans un système
+            impliquant plusieurs parties prenantes (joueurs, organisateurs, administrateurs) a nécessité
+            une réflexion poussée sur l'<strong>optimisation du modèle</strong> (AC1) : choix des clés
+            primaires et étrangères, normalisation des tables, gestion des contraintes d'intégrité.
+        </p>
+        <p>
+            Mon rôle de Responsable Qualité m'a également amené à vérifier la <strong>confidentialité et
+            l'intégrité des données</strong> (AC2) : contrôle des accès par rôle, validation des données
+            en entrée, et vérification de la cohérence des opérations CRUD développées par l'équipe.
+        </p>
+
+        <h4>Trace 3 : <a class="apprentissage" href="project1.html">Projet CTF – Plateforme Yggame</a></h4>
+        <p>
+            Le projet CTF m'a permis de travailler concrètement sur la <strong>manipulation de données
+            hétérogènes</strong> (AC4). La plateforme exploite simultanément deux types de données de
+            nature différente : des données <strong>structurées</strong> stockées dans la base relationnelle
+            MariaDB (utilisateurs, scores, équipes) et des données <strong>semi-structurées au format JSON</strong>
+            provenant de l'API de CTFd (liste des défis, catégories, soumissions, classements). Ces données
+            de sources et de formats distincts devaient être récupérées, transformées et intégrées de manière
+            cohérente pour alimenter l'affichage de la plateforme, ce qui constitue précisément le défi de
+            la manipulation de données hétérogènes.
+        </p>
+
+        <h3>Conclusion</h3>
+
+        <p>
+            Ces projets, réalisés dans le cadre de ma formation BUT Informatique parcours IAMSI, témoignent
+            de ma progression concrète dans les trois compétences arrêtées au niveau 2. Ils illustrent ma
+            capacité à mobiliser des apprentissages critiques précis dans des contextes professionnels réels,
+            en équipe et sous contrainte.
+        </p>
+        <p>
+            Chaque projet m'a permis de développer des compétences complémentaires : la rigueur algorithmique
+            (C2), la maîtrise des infrastructures communicantes (C3) et la gestion responsable des données (C4)
+            forment un socle technique cohérent avec les métiers visés par le parcours IAMSI, notamment
+            intégrateur d'applications, Product Owner technique, ou assistant chef de projet.
+            J'espère poursuivre le développement de ces compétences dans une formation d'ingénieur, notamment au sein du parcours Développement Logiciel des Mines d'Alès.
+        </p>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <small>© 2026 – Badr BELAID</small>
+</footer>
+
+</body>
+</html>

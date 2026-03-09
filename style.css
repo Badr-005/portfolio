@@ -305,6 +305,17 @@ img {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+.apprentissage {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.apprentissage:hover {
+    color: var(--primary-dark);
+}
+
 /* =========================================
    8. RESPONSIVE
    ========================================= */
